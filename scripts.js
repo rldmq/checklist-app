@@ -1,11 +1,13 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
 import { getDatabase, ref, set, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
+// VARIABLES
 const appSettings = {
     databaseURL: "https://realtime-database-3d44f-default-rtdb.firebaseio.com/"
 }
 
-const newDBNameEl = document.getElementById('new-database')
+const newDBNameForm = document.getElementById("new-database-form")
+const newDBNameEl = document.getElementById("new-database")
 const addBtn = document.getElementById("add-btn")
 
 const dbSelection = document.getElementById("db-selection")
@@ -13,6 +15,7 @@ const dbSelection = document.getElementById("db-selection")
 const app = initializeApp(appSettings)
 const database = getDatabase(app)
 
+// FIREBASE
 onValue(ref(database), function(snapshot){
     const dbs = Object.entries(snapshot.val())
 
@@ -48,23 +51,36 @@ onValue(ref(database), function(snapshot){
     }
 })
 
-addBtn.addEventListener("click", function(){
-    let newDBName = newDBNameEl.value
 
-    // Add naming convention
-    // newDBName = newDBName.split(" ").map(e => e.toLowerCase()).join("-")
-
-    clearList()
-
-    // Push new root to firebase
-    push(ref(database, newDBName), "-Placeholder-")
-
-    newDBNameEl.value = ""
+// EVENT LISTENERS
+newDBNameForm.addEventListener("submit", function(e){
+    e.preventDefault()
+    newDatabase()
 })
 
+addBtn.addEventListener("click", function(){
+    newDatabase()
+})
 
+// FUNCTIONS
 function clearList(){
     dbSelection.innerHTML = ""
+}
+
+function newDatabase(){
+    if(newDBNameEl.value){
+        let newDBName = newDBNameEl.value
+    
+        // Add naming convention
+        // newDBName = newDBName.split(" ").map(e => e.toLowerCase()).join("-")
+    
+        clearList()
+    
+        // Push new root to firebase
+        push(ref(database, newDBName), "-Placeholder-")
+    
+        newDBNameEl.value = ""
+    }
 }
 
 // create login and users through firebase + create new account

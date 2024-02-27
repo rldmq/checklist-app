@@ -4,14 +4,19 @@
         <title id="title"></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
     </head>
     <body>
-        <a href="../index.html" id="back-btn">&larr; Back to checklists</a>
-        <h1 id="list-name"></h1>
-        <form for="new-list-entry">
-            <input type="text" id="new-list-entry" name="new-list-entry"/>
-        </form>
-        <button id="add-btn">Add</button>
+        <div class="app-top">
+            <a href="../index.html" id="back-btn">&larr; Back to checklists</a>
+            <h1 id="list-name" class="title"></h1>
+            <form for="new-list-entry" id="new-list-entry-form">
+                <input type="text" id="new-list-entry" class="padding borderRadius" name="new-list-entry" placeholder="New item..."/>
+            </form>
+            <button id="add-btn" class="padding borderRadius">Add</button>
+        </div>
         <ul id="checklist">
             <!-- LIST ITEMS GO HERE (JAVASCRIPT) -->
         </ul>

@@ -41,16 +41,28 @@ body{
     padding-top: 20px;
 }
 
+#new-database-form{
+    align-self: stretch;
+}
+
 #new-database{
     border: none;
     background: rgb(245, 245, 245);
+    width: 100%;
+    text-align: center;
 }
 
 #add-btn{
     background: #CCD5AE;
     border: none;
     align-self: stretch;
+    cursor: pointer;
 }
+
+#add-btn:hover{
+    background: #b1b996;
+}
+
 
 #db-selection{
     display: flex;
@@ -65,6 +77,10 @@ body{
     cursor: pointer;
     background: #D4A373;
     flex-grow: 1;
+}
+
+.database-item:hover{
+    background: rgb(173, 134, 95);
 }
 
 .database-item a{
