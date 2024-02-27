@@ -37,9 +37,20 @@ body{
 
 #back-btn{
     align-self: end;
+    text-decoration: none;
+}
+
+#back-btn:hover{
+    color: rgb(149, 74, 20);
+}
+
+#tenor-gif{
+    align-self: center;
+    border-radius: 20px;
 }
 
 .title{
+    margin-top: 10px;
     font-size: 30px;
 }
 
@@ -78,8 +89,13 @@ body{
 .list-item{
     cursor: pointer;
     background: #D4A373;
+    flex-grow: 1;
 }
 
 .list-item:hover{
     background: rgb(173, 134, 95);
+}
+
+.empty-list{
+    width: 100%;
 }

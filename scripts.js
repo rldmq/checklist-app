@@ -36,10 +36,12 @@ onValue(ref(database), function(snapshot){
         dbEl.innerHTML = `<a href="./pages/database.html">${dbName}</a>`
         dbDel.innerText = `🗑️`
 
-        dbDel.addEventListener("click", function(){
+        // EVENT LISTENER FOR DELETING
+        dbDel.addEventListener("dblclick", function(){
             remove(ref(database,`${dbName}`))
         })
 
+        // EVENT LISTENER FOR STORING DB NAME
         dbEl.addEventListener("click", function(){
             localStorage.setItem("database",`${dbName}`)
         })
