@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Checklist App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="app-top">
+            <h1 class="title">Checklists</h1>
+            <form for="new-database">
+                <input name="new-database" id="new-database" class="padding borderRadius" type="text" placeholder="New checklist..." />
+            </form>
+            <button id="add-btn" class="padding borderRadius">New</button>
+        </div>
+        <ul id="db-selection">
+            <!-- DATABASES GO HERE (JAVASCRIPT) -->
+            <!-- 
+                LIST ITEM LAYOUT PER JS FILE
+                <li class="database-container">
+                    <div class="database-item">
+                        <a></a>
+                    </div>
+                    <button class="delete-btn"></button>
+                </li> 
+            -->
+        </ul>
+        <script src="./scripts.js" type="module"></script>
+    </body>
+</html>

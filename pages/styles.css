@@ -1,0 +1,29 @@
+/* 
+    GLOBAL
+*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: lightblue;
+    user-select: none;
+}
+
+/* 
+    APP
+*/
+#checklist{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.list-item{
+    cursor: pointer;
+    padding: 15px;
+    background: lightsalmon;
+    border-radius: 8px;
+}

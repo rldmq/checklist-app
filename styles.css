@@ -1,0 +1,84 @@
+/* 
+    GLOBAL
+*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #FEFAE0;
+    user-select: none;
+    font-family: 'Happy Monkey', system-ui;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(76, 38, 10);
+}
+
+.padding{
+    padding: 15px;
+}
+
+.borderRadius{
+    border-radius: 8px;
+
+}
+
+/* 
+    APP
+*/
+body{
+    padding: 10px;
+}
+
+.title{
+    font-size: 30px;
+}
+
+.app-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-top: 20px;
+}
+
+#new-database{
+    border: none;
+    background: rgb(245, 245, 245);
+}
+
+#add-btn{
+    background: #CCD5AE;
+    border: none;
+    align-self: stretch;
+}
+
+#db-selection{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style-type: none;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.database-item{
+    cursor: pointer;
+    background: #D4A373;
+    flex-grow: 1;
+}
+
+.database-item a{
+    background: none;
+    text-decoration: none;
+}
+
+.database-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.delete-btn{
+    cursor: pointer;
+    border: none;
+}
